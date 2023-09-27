@@ -47,6 +47,8 @@ name: 'Terraform'
 on:
   push:
     branches: [ "main" ]
+    paths-ignore:
+      - './github/workflows/*'
   pull_request:
   workflow_dispatch:
 
@@ -55,12 +57,7 @@ jobs:
     name: 'Terraform'
     runs-on: ubuntu-latest
     environment: production
-
-    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
-    defaults:
-      run:
-        shell: bash
-
+    
     steps:
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
@@ -70,10 +67,7 @@ jobs:
       run: |
         ls -la
         pwd
-        git clone git@github.com:ITWizardz/I.T-Wizards-Terraform-project.git
 
-        cd I.T-Wizards-Terraform-project
-      working-directory: I.T-Wizards-Terraform-project 
   
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
     - name: Setup Terraform
