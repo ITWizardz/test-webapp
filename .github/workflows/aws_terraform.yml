@@ -85,5 +85,5 @@ jobs:
     - name: Initiate Terraform
       run: terraform init
       
-    - name: Terraform Format
+    - name: Terraform Apply
       run: terraform apply --auto-approve
