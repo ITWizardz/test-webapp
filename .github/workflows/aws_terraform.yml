@@ -76,7 +76,7 @@ jobs:
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Clone TF Repo
-      run: git@github.com:ITWizardz/I.T-Wizards-Terraform-project.git
+      run: git clone https://github.com/ITWizardz/I.T-Wizards-Terraform-project.git
 
     - name: Cd into folder
       run: cd I.T-Wizards-Terraform-project
