@@ -70,9 +70,7 @@ jobs:
   
     - name: Clone TF Repo
       run: |
-        git clone https://github.com/ITWizardz/I.T-Wizards-Terraform-project.git
-
-        cd I.T-Wizards-Terraform-project
+        git clone git@github.com:ITWizardz/I.T-Wizards-Terraform-project.git && cd ${${_%%.git*}##*/}
 
         ls
       working-directory: /home/runner/work/test-webapp/test-webapp/I.T-Wizards-Terraform-project
