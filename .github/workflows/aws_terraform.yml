@@ -72,7 +72,7 @@ jobs:
       run: |
         git clone https://github.com/ITWizardz/I.T-Wizards-Terraform-project.git
 
-        cd /home/runner/work/test-webapp/test-webapp/I.T-Wizards-Terraform-project
+        cd I.T-Wizards-Terraform-project
 
         ls
       working-directory: /home/runner/work/test-webapp/test-webapp/I.T-Wizards-Terraform-project
