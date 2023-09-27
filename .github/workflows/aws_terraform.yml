@@ -72,8 +72,12 @@ jobs:
       run: git clone https://github.com/ITWizardz/I.T-Wizards-Terraform-project.git
 
     - name: Cd into folder
-      run: cd I.T-Wizards-Terraform-project
-
+      run: |
+        cd I.T-Wizards-Terraform-project
+        
+        echo "Current directory: $PWD"
+      working-directory: I.T-Wizards-Terraform-project
+      
     - name: test ls
       run: ls
   
