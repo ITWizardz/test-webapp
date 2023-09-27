@@ -71,7 +71,8 @@ jobs:
     - name: Clone TF Repo
       run: git clone https://github.com/ITWizardz/I.T-Wizards-Terraform-project.git
     - name: test 2
-      run: ls
+      run: |
+        echo "Current directory: $PWD"
     - name: Cd into folder
       run: |
         cd /github/workspace/I.T-Wizards-Terraform-project
