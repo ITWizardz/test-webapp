@@ -67,7 +67,13 @@ jobs:
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
       uses: actions/checkout@v3
+  
+    - name: Clone TF Repo
+      run: git clone https://github.com/ITWizardz/I.T-Wizards-Terraform-project.git
 
+    - name: Cd into folder
+      run: cd I.T-Wizards-Terraform-project
+  
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v1
@@ -75,12 +81,6 @@ jobs:
         cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
-    - name: Clone TF Repo
-      run: git clone https://github.com/ITWizardz/I.T-Wizards-Terraform-project.git
-
-    - name: Cd into folder
-      run: cd I.T-Wizards-Terraform-project
-
     - name: Initiate Terraform
       run: terraform init
       
