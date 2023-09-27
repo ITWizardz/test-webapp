@@ -69,12 +69,12 @@ jobs:
       uses: actions/checkout@v3
   
     - name: Clone TF Repo
-      run: git clone https://github.com/ITWizardz/I.T-Wizards-Terraform-project.git
-    - name: Cd into folder
       run: |
+        git clone https://github.com/ITWizardz/I.T-Wizards-Terraform-project.git
+
         cd /home/runner/work/test-webapp/test-webapp/I.T-Wizards-Terraform-project
-        
-        echo "Current directory: $PWD"
+
+        ls
       working-directory: /home/runner/work/test-webapp/test-webapp/I.T-Wizards-Terraform-project
       
     - name: test ls
