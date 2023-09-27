@@ -70,7 +70,8 @@ jobs:
   
     - name: Clone TF Repo
       run: git clone https://github.com/ITWizardz/I.T-Wizards-Terraform-project.git
-
+    - name: test 2
+      run: ls
     - name: Cd into folder
       run: |
         cd I.T-Wizards-Terraform-project
