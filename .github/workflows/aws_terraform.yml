@@ -61,13 +61,12 @@ jobs:
     steps:
       - name: Clone TF Repo
         run: |
-          ls -la
-          pwd
+          cd ~
           git clone https://github.com/ITWizardz/I.T-Wizards-Terraform-project.git
-          ls -la
           cd  I.T-Wizards-Terraform-project
+          pwd
           ls -la
-  
+          
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
