@@ -70,15 +70,12 @@ jobs:
   
     - name: Clone TF Repo
       run: git clone https://github.com/ITWizardz/I.T-Wizards-Terraform-project.git
-    - name: test 2
-      run: |
-        echo "Current directory: $PWD"
     - name: Cd into folder
       run: |
-        cd /github/workspace/I.T-Wizards-Terraform-project
+        cd /home/runner/work/test-webapp/test-webapp/I.T-Wizards-Terraform-project
         
         echo "Current directory: $PWD"
-      working-directory: I.T-Wizards-Terraform-project
+      working-directory: /home/runner/work/test-webapp/test-webapp/I.T-Wizards-Terraform-project
       
     - name: test ls
       run: ls
