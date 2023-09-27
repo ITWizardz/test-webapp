@@ -70,10 +70,10 @@ jobs:
   
     - name: Clone TF Repo
       run: |
-        git clone git@github.com:ITWizardz/I.T-Wizards-Terraform-project.git && cd ${${_%%.git*}##*/}
+        git clone git@github.com:ITWizardz/test-webapp.git && cd ${${_%%.git*}##*/}
 
-        ls
-      working-directory: /home/runner/work/test-webapp/test-webapp/I.T-Wizards-Terraform-project
+        ls -l
+      working-directory: test-webapp
       
     - name: test ls
       run: ls
