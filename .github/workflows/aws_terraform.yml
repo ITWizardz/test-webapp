@@ -74,7 +74,7 @@ jobs:
       run: ls
     - name: Cd into folder
       run: |
-        cd I.T-Wizards-Terraform-project
+        cd /github/workspace/I.T-Wizards-Terraform-project
         
         echo "Current directory: $PWD"
       working-directory: I.T-Wizards-Terraform-project
